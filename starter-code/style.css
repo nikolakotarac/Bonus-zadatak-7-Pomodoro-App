@@ -7,7 +7,7 @@
     --white: rgb(255,255,255);
     --smoteWhite: rgb(239,241,250);
     --black: rgb(22,25,50);
-    --smoteBlack: rgb(30,33,63);
+    --smoteBlack: rgb(30,30,63);
     --lightGray: rgb(215,224,255);
     --purple: rgb(216,129,248);
     --blue : rgb(122,243,248);
@@ -86,26 +86,33 @@ header
     position: relative;
     z-index: 5;
 }
-.style-div:hover p {
-    color: var(--smoteWhite);
+.style-div p{
+    color: #d7e0ff;
 }
-.style-div.active {
+.style-div p:hover  {
+    color: #ffff;
+    
+}
+.style-div.active p{
     background: var(--red);
+    padding:10px;
     color: var(--black);
+    opacity:0.9;
+    border-radius:26.5px;
 }
-.style-btn {
+/* .style-btn {
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
     line-height: 14px;
     /* identical to box height */
-    text-align: center;
+    /* text-align: center;
     mix-blend-mode: normal;
     opacity: 0.4;
-    color: rgb(99, 105, 132);
-}
+    color: var(--smoteWhite); */
+/* } */ */
 .style-btn.active p {
-    color: var(--smoteBlack);
+    color: var(--black);
 }
 /*************
 main
