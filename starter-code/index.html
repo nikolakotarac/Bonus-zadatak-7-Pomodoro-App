@@ -2,8 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700;800&family=Roboto+Slab:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="style.css">
     <link
       rel="icon"
       type="image/png"
@@ -14,7 +17,116 @@
     <title>Pomodoro app</title>
   </head>
   <body>
-    pomodoro short break long break start pause restart Settings Time (minutes)
-    pomodoro short break long break Font Color Apply
+    <body>
+      <img src="./assets/logo.svg" class="logo">
+      
+      <div class='header'>
+          <div class="style-div active" data-id="0">
+              <p class="style-btn" >pomodoro</p>
+          </div>
+          <div class="style-div" data-id="1">
+              <p class="style-btn">short break</p>
+          </div>
+          <div class="style-div" data-id="2">
+              <p class="style-btn">long break</p>
+          </div>
+        </div>
+  
+      <div class="main">
+          <div class="main-content">
+              <div class="line">
+                  <svg width="355" height="375">
+                      <circle r="165" cx="176" cy="188" class="progress" style="stroke-dasharray: 1036.73; stroke-dashoffset: 1036.73;"></circle>
+                    </svg>
+              </div>
+              <div class="time">
+                  <h1 class="minutes">25</h1>
+                  <h1>:</h1>
+                  <h1 class="seconds">00</h1>
+              </div>
+              <div class="status">
+                  <h3>Start</h3>
+              </div>
+          </div>
+        </div>   
+         <img src="./assets/icon-settings.svg" class="settings-btn">
+      <div class="overlay hidden">
+          <div class="modal hidden">
+              <div class="modal-header">
+                  <h2>Settings</h2>
+                  <div class="close-btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"><path fill="#1E213F" fill-rule="evenodd" d="M11.95.636l1.414 1.414L8.414 7l4.95 4.95-1.414 1.414L7 8.414l-4.95 4.95L.636 11.95 5.586 7 .636 2.05 2.05.636 7 5.586l4.95-4.95z" opacity=".5"/></svg>
+                  </div>
+              </div>
+              <div class="modal-content">
+                  <h3 class="input-header">TIME (MINTES)</h3>
+  
+                  <div class="inputs">
+                      <div class="input-pomodoro">
+                          <p class="style-btn">pomodoro</p>
+                          <input type="number" class="input1" value="25">
+                          <div class="arrows-div">
+                              <div class="arrows">
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="arrow-scg arrow-up" width="14" height="7"><path class="arrow-scg arrow-up" fill="none" stroke="#1E213F" stroke-opacity=".25" stroke-width="2" d="M1 6l6-4 6 4"/></svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="arrow-down" width="14" height="7"><path fill="none" stroke="#1E213F" stroke-opacity=".25" stroke-width="2" d="M1 1l6 4 6-4"/></svg>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="input-short-break">
+                          <p class="style-btn">short break</p>
+                          <input type="number" class="input2" value="5">
+                          <div class="arrows-div">
+                              <div class="arrows">
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="arrow-scg arrow-up" width="14" height="7"><path class="arrow-scg arrow-up" fill="none" stroke="#1E213F" stroke-opacity=".25" stroke-width="2" d="M1 6l6-4 6 4"/></svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="arrow-down" width="14" height="7"><path fill="none" stroke="#1E213F" stroke-opacity=".25" stroke-width="2" d="M1 1l6 4 6-4"/></svg>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="input-long-break">
+                          <p class="style-btn">long break</p>
+                          <input type="number" class="input3" value="15">
+                          <div class="arrows-div">
+                              <div class="arrows">
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="arrow-scg arrow-up" width="14" height="7"><path class="arrow-scg arrow-up" fill="none" stroke="#1E213F" stroke-opacity=".25" stroke-width="2" d="M1 6l6-4 6 4"/></svg>
+                                  <svg xmlns="http://www.w3.org/2000/svg" class="arrow-down" width="14" height="7"><path fill="none" stroke="#1E213F" stroke-opacity=".25" stroke-width="2" d="M1 1l6 4 6-4"/></svg>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+  
+  
+                  <div class="font">  
+                      <h3>font</h3>
+                      <div class="pickers">
+                          <h5 class="kumbh">Aa</h5>
+                          <h5 class="roboto">Aa</h5>
+                          <h5 class="space">Aa</h5>
+                      </div>
+                  </div>
+  
+                  <div class="color">
+                      <h3>color</h3>
+                      <div class="pickers">
+                          <div class="red color-btn active">
+                              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" class="svg-inline--fa fa-check fa-w-16" role="img" viewBox="0 0 512 512"><path fill="var(--black)" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg>
+                          </div>
+                          <div class="blue color-btn">
+                              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" class="svg-inline--fa fa-check fa-w-16" role="img" viewBox="0 0 512 512"><path fill="var(--black)" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg>
+                          </div>
+                          <div class="purple color-btn">
+                              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="check" class="svg-inline--fa fa-check fa-w-16" role="img" viewBox="0 0 512 512"><path fill="var(--black)" d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/></svg>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <button class="apply-btn">
+                      Apply
+                  </button>
+              </div>
+          </div>
+      </div>
+  
+    
+     <script src="script.js"></script>
   </body>
 </html>
